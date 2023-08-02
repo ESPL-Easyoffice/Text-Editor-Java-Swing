@@ -137,9 +137,9 @@ public class Menu extends JFrame implements ActionListener {
 		if (e.getSource() == openFile) {
 			JFileChooser fileChooser = new JFileChooser();
 
-			int rueckgabeWert = fileChooser.showOpenDialog(null);
+			int chooser = fileChooser.showOpenDialog(null);
 
-			if (rueckgabeWert == JFileChooser.APPROVE_OPTION) {
+			if ( chooser == JFileChooser.APPROVE_OPTION) {
 				Texteditor texteditor = new Texteditor(fileChooser.getSelectedFile());
 				texteditor.setVisible(true);
 				texteditor.setResizable(false);
